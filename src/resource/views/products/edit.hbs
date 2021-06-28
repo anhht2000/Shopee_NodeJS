@@ -1,0 +1,75 @@
+<div class="x_content fs-3 container ">
+    <form class="mx-auto" action="" enctype="multipart/form-data" method="post">
+
+        <span class="section">EDIT PRODUCT</span>
+        <div class="field item form-group">
+            <label class="col-form-label col-md-3 col-sm-3  label-align">TITLE<span class="required">*</span></label>
+            <div class="col-md-6 col-sm-6">
+                <input value="{{product.title}}" class="form-control fs-2" type="text" data-validate-length-range="6"
+                    data-validate-words="2" name="title" placeholder="ex. John f. Kennedy">
+            </div>
+        </div>
+        <div class="field item form-group">
+            <label class="col-form-label col-md-3 col-sm-3  label-align">OLDPRICE<span class="required">*</span></label>
+            <div class="col-md-6 col-sm-6">
+                <input value="{{product.oldPrice}}" class="form-control fs-2" name="oldPrice"
+                    data-validate-length-range="5,15" type="text">
+            </div>
+        </div>
+        <div class="field item form-group">
+            <label class="col-form-label col-md-3 col-sm-3  label-align">STAR<span class="required">*</span></label>
+            <div class="col-md-6 col-sm-6">
+                <input value="{{product.star}}" class="form-control fs-2" name="star" type="text">
+            </div>
+        </div>
+        <div class="field item form-group">
+            <label class="col-form-label col-md-3 col-sm-3  label-align">BRAND<span class="required">*</span></label>
+            <div class="col-md-6 col-sm-6">
+                <input value="{{product.brand}}" class="form-control fs-2" type="text" name="brand"
+                    data-validate-linked="email">
+            </div>
+        </div>
+        <div class="field item form-group">
+            <label class="col-form-label col-md-3 col-sm-3  label-align">ORIGIN <span class="required">*</span></label>
+            <div class="col-md-6 col-sm-6">
+                <input value="{{product.origin}}" class="form-control fs-2" type="text" name="origin"
+                    data-validate-minmax="10,100">
+            </div>
+        </div>
+        <div class="field item form-group">
+            <label class="col-form-label col-md-3 col-sm-3  label-align">SALE<span class="required">*</span></label>
+            <div class="col-md-6 col-sm-6">
+                <input value="{{product.sale}}" class="form-control fs-2" type="text" name="sale">
+            </div>
+        </div>
+        <div class="field item form-group">
+            <label class="col-form-label col-md-3 col-sm-3  label-align">NEWPRICE<span class="required">*</span></label>
+            <div class="col-md-6 col-sm-6">
+                <input value="{{product.newPrice}}" class="form-control fs-2" type="text" name="newPrice">
+            </div>
+        </div>
+        <div class="field item form-group">
+            <label class="col-form-label col-md-3 col-sm-3  label-align">IMAGE<span class="required">*</span></label>
+            <div class="col-md-6 col-sm-6">
+                <input value="{{product.image}}" class="form-control fs-2" type="file" name="image">
+            </div>
+        </div>
+
+        <div class="field item form-group">
+            <label class="col-form-label col-md-3 col-sm-3  label-align">ISLIKED<span class="required">*</span></label>
+            <div class="col-md-6 col-sm-6">
+                <input value="{{product.isLiked}}" class="form-control fs-2" type="text" name="isLiked"
+                    data-validate-linked="password">
+            </div>
+        </div>
+
+        <div class="ln_solid">
+            <div class="form-group">
+                <div class="col-md-6 mt-2 ">
+                    <button type="submit" class="btn btn-primary btn-lg fs-3">Submit</button>
+                    <button type="reset" class="btn btn-success btn-lg fs-3">Reset</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

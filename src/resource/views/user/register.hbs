@@ -1,0 +1,55 @@
+<div class="register">
+    <form method="POST" action="" class="auth-form ">
+        <!--disable auth-form--signin--disable-->
+        <div class="auth-form__container">
+            <div class="auth-form__header">
+                <h3 class="auth-form__heading">Đăng ký</h3>
+                <a style="display: inline-block;" href="/user/login" class="auth-form__switch-btn">Đăng nhập</a>
+            </div>
+
+            <div class="auth-form__form">
+                <div class="auth-form__group">
+                    <input name="txtUser" value="{{data.username}}" type="text" class="auth-form__input"
+                        placeholder="Tên đăng nhập của bạn">
+                </div>
+                <div class="auth-form__group">
+                    <input name="txtPass" value="{{data.password}}" type="text" class="auth-form__input"
+                        placeholder="Mật khẩu của bạn">
+                </div>
+                <div class="auth-form__group">
+                    <input name="txtName" value="{{data.name}}" type="text" class="auth-form__input"
+                        placeholder="Họ và tên của bạn">
+                </div>
+            </div>
+
+            <div class="auth-form__aside">
+                <p class="auth-form_policy-text">
+                    {{#if message}}
+                    <span class="{{color}}">{{message}}</span>
+                    {{else}}
+                    Bằng việc đăng kí, bạn đã đồng ý với Tuấn Anh về
+                    <a href="" class="auth-form_policy-link">Điều khoản dịch vụ</a> &amp;
+                    <a href="" class="auth-form_policy-link">Chính sách bảo mật</a>
+                    {{/if}}
+                </p>
+            </div>
+
+            <div class="auth-form_controls" style="display: flex;justify-content: flex-end;align-items: center;">
+                <a style="display: inline-flex;align-items: center;justify-content: center;" href="/"
+                    class="bton bton--normal">TRỞ LẠI</a>
+                <button type="submit" class="bton bton--primary">ĐĂNG KÝ</button>
+            </div>
+        </div>
+
+        <div class="auth-form__socials">
+            <a href="" class="bton bton-facebook bton--with-icon">
+                <i class="fab fa-facebook-square"></i>
+                <p class="auth-form__socials-text">Kết nối với Facebook</p>
+            </a>
+            <a href="" class="bton bton-google bton--with-icon">
+                <i class="fab fa-google"></i>
+                <p class="auth-form__socials-text">Kết nối với Google</p>
+            </a>
+        </div>
+    </form>
+</div>

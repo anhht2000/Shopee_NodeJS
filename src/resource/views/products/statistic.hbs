@@ -1,0 +1,67 @@
+<h4><a href="/product/delete/trash">TRASH({{countdele}})</a></h4>
+<table class="table my-5">
+    <thead class="table-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Star</th>
+            <th scope="col">Old Price</th>
+            <th scope="col">New Price</th>
+            <th scope="col">Sale</th>
+            <th scope="col">Brand</th>
+            <th scope="col">Origin</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each products}}
+        <tr>
+            <th scope="row">{{sum @index 1}}</th>
+            <td>{{this.title}}</td>
+            <td>{{this.star}}</td>
+            <td>{{this.oldPrice}}</td>
+            <td>{{this.newPrice}}</td>
+            <td>{{this.sale}}</td>
+            <td>{{this.brand}}</td>
+            <td>{{this.origin}}</td>
+            <td><a href="/product/edit/{{this._id}}">Edit</a>|<a href="" data-bs-target="#exampleModal"
+                    data-bs-toggle="modal" data-id="/product/delete/{{this._id}}">Delete</a></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+{{!-- //modal --}}
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Are you sure??</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Want to delete this product</p>
+            </div>
+            <div class="modal-footer">
+                <button id="btnDele" type="button" class="btn btn-secondary text-danger"
+                    data-bs-dismiss="modal">Delete</button>
+                <button id="btnClose" type="button" class="btn btn-primary text-secondary">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+{{!-- //hideForm --}}
+<form action="" method="POST" id="deleteForm"></form>
+<script>
+    let myModal = document.querySelector('#exampleModal')
+    let btnDele = document.querySelector('#btnDele')
+    let btnClose = document.querySelector('#btnClose')
+    let deleForm = document.querySelector('#deleteForm')
+    myModal.addEventListener('shown.bs.modal', function (e) {
+        var button = event.relatedTarget
+        idCourse = button.getAttribute('data-id')
+        btnDele.onclick = function () {
+            deleForm.setAttribute('action', `${idCourse}`)
+            deleForm.submit();
+        }
+    })
+</script>

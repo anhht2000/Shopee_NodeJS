@@ -1,0 +1,49 @@
+<div class="register">
+    <form method="POST" action="" class="auth-form ">
+        <div class="auth-form__container">
+            <div class="auth-form__header">
+                <h3 class="auth-form__heading">Đăng nhập</h3>
+                <span class="auth-form__switch-btn">Đăng ký</span>
+            </div>
+
+            <div class="auth-form__form">
+                <div class="auth-form__group">
+                    <input name="txtuserName" type="text" class="auth-form__input"
+                        placeholder="Email / Số điện thoại / Tên đăng nhập">
+                </div>
+                <div class="auth-form__group">
+                    <input name="txtPassword" type="password" class="auth-form__input" placeholder="Mật khẩu">
+                </div>
+            </div>
+
+            <div class="auth-form__aside">
+                {{#if message}}
+                <div class="auth-form__help">
+                    <p href="" class="auth-form_policy-link auth-form_policy-link--nomal text-danger">{{message}}</p>
+                </div>
+                {{/if}}
+                <div class="auth-form__help">
+                    <a href="" class="auth-form_policy-link ">Quên mật khẩu</a>
+                    <a href="" class="auth-form_policy-link auth-form_policy-link--nomal">Cần trợ giúp</a>
+                </div>
+            </div>
+
+            <div class="auth-form_controls" style="display: flex;justify-content: flex-end;align-items: center;">
+                <a style="display: inline-flex;align-items: center;justify-content: center;" href="/"
+                    class="bton bton--normal">TRỞ LẠI</a>
+                <button type="submit" class="bton bton--primary">ĐĂNG NHẬP</button>
+            </div>
+        </div>
+
+        <div class="auth-form__socials">
+            <a href="" class="bton bton-facebook bton--with-icon">
+                <i class="fab fa-facebook-square"></i>
+                <p class="auth-form__socials-text">Kết nối với Facebook</p>
+            </a>
+            <a href="" class="bton bton-google bton--with-icon">
+                <i class="fab fa-google"></i>
+                <p class="auth-form__socials-text">Kết nối với Google</p>
+            </a>
+        </div>
+    </form>
+</div>

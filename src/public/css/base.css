@@ -1,0 +1,107 @@
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --text-hover: hsla(0, 0%, 100%, .7);
+    --primary-color: #ee4d2d;
+    --border-color: #dbdbdb;
+    --background: #cccccc42;
+    --shadow: rgb(113 109 109 / 60%);
+    --height-header-sort: 43px;
+    --height-header: 73px;
+    --height-navi-mobile: 60px
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    outline: 0;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: "Helvetica Neue", Helvetica, Arial, "WenQuanYi Zen Hei", "Hiragino Sans GB", sans-serif;
+    box-sizing: border-box;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+    color: #353535;
+}
+
+body {
+    color: #353535;
+}
+
+/* 
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+} */
+
+/* modal  */
+.model {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+}
+
+.model--disable {
+    display: none;
+}
+
+.model__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.35);
+    z-index: 0;
+}
+
+.model__body {
+
+    background-color: var(--white-color);
+    margin: auto;
+    z-index: 1;
+}
+
+.bton {
+    border: none;
+    min-width: 142px;
+    /* background-color: yellow; */
+    height: 35px;
+    font-size: 1.3rem;
+    border-radius: 2px;
+}
+
+.bton--normal {}
+
+.bton.bton--normal:hover {
+    background-color: rgba(204, 204, 204, 0.651);
+}
+
+.bton.bton--primary:hover {
+    opacity: 0.85;
+}
+
+.bton--primary {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.bton--with-icon {
+    display: inline-flex;
+    align-items: center;
+}

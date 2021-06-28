@@ -1,0 +1,140 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TuAnh Shop</title>
+    <link rel="icon" href="/image/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/font-awesome/fontawesome-free-5.15.3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/bootstrap/bootstrap-5.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/grid.css">
+    <link rel="stylesheet" type="text/css" href="/css/base.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/responsive.css">
+</head>
+
+<body>
+    <div class="main">
+        <!-- header -->
+        {{> header}}
+        <!-- end header  -->
+
+        <!-- modal layout -->
+        <!-- <input hidden  type="checkbox" id="modal--layout">
+        <input hidden type="checkbox" id="modal--layout2"> -->
+        <div class="model model--disable">
+            <!--disable-->
+            <label for="modal--layout" class="model__overlay">
+            </label>
+            <label for="modal--layout2" class="model__overlay model__overlay-2">
+            </label>
+            <div class="model__body">
+                <div class="model__inner">
+                    <!-- authen form -->
+                    <div class="auth-form auth-form--signin--disable">
+                        <!--disable-->
+                        <div class="auth-form__container">
+                            <div class="auth-form__header">
+                                <h3 class="auth-form__heading">Đăng ký</h3>
+                                <span class="auth-form__switch-btn">Đăng nhập</span>
+                            </div>
+
+                            <div class="auth-form__form">
+                                <div class="auth-form__group">
+                                    <input type="text" class="auth-form__input" placeholder="Email của bạn">
+                                </div>
+                                <div class="auth-form__group">
+                                    <input type="password" class="auth-form__input" placeholder="Mật khẩu của bạn">
+                                </div>
+                                <div class="auth-form__group">
+                                    <input type="password" class="auth-form__input"
+                                        placeholder="Nhập lại mật khẩu của bạn">
+                                </div>
+                            </div>
+
+                            <div class="auth-form__aside">
+                                <p class="auth-form_policy-text">
+                                    Bằng việc đăng kí, bạn đã đồng ý với Tuấn Anh về
+                                    <a href="" class="auth-form_policy-link">Điều khoản dịch vụ</a> &amp;
+                                    <a href="" class="auth-form_policy-link">Chính sách bảo mật</a>
+                                </p>
+                            </div>
+
+                            <div class="auth-form_controls">
+                                <button class="bton bton--normal">TRỞ LẠI</button>
+                                <button class="bton bton--primary">ĐĂNG KÝ</button>
+                            </div>
+                        </div>
+
+                        <div class="auth-form__socials">
+                            <a href="" class="bton bton-facebook bton--with-icon">
+                                <i class="fab fa-facebook-square"></i>
+                                <p class="auth-form__socials-text">Kết nối với Facebook</p>
+                            </a>
+                            <a href="" class="bton bton-google bton--with-icon">
+                                <i class="fab fa-google"></i>
+                                <p class="auth-form__socials-text">Kết nối với Google</p>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- login -->
+                    <div class="auth-form auth-form--login--disable">
+                        <div class="auth-form__container">
+                            <div class="auth-form__header">
+                                <h3 class="auth-form__heading">Đăng nhập</h3>
+                                <span class="auth-form__switch-btn">Đăng ký</span>
+                            </div>
+
+                            <div class="auth-form__form">
+                                <div class="auth-form__group">
+                                    <input type="text" class="auth-form__input"
+                                        placeholder="Email / Số điện thoại / Tên đăng nhập">
+                                </div>
+                                <div class="auth-form__group">
+                                    <input type="password" class="auth-form__input" placeholder="Mật khẩu">
+                                </div>
+                            </div>
+
+                            <div class="auth-form__aside">
+                                <div class="auth-form__help">
+                                    <a href="" class="auth-form_policy-link ">Quên mật khẩu</a>
+                                    <a href="" class="auth-form_policy-link auth-form_policy-link--nomal">Cần trợ
+                                        giúp</a>
+
+                                </div>
+                            </div>
+
+                            <div class="auth-form_controls">
+                                <button class="bton bton--normal">TRỞ LẠI</button>
+                                <button class="bton bton--primary">ĐĂNG KÝ</button>
+                            </div>
+                        </div>
+
+                        <div class="auth-form__socials">
+                            <a href="" class="bton bton-facebook bton--with-icon">
+                                <i class="fab fa-facebook-square"></i>
+                                <p class="auth-form__socials-text">Kết nối với Facebook</p>
+                            </a>
+                            <a href="" class="bton bton-google bton--with-icon">
+                                <i class="fab fa-google"></i>
+                                <p class="auth-form__socials-text">Kết nối với Google</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- end modal layout -->
+        {{{body}}}
+
+        <!-- footer -->
+        {{> footer}}
+    </div>
+
+    <script src="/bootstrap/bootstrap-5.0.0/js/bootstrap.min.js"></script>
+    <script src="/js/index.js"></script>
+</body>
+
+</html>
