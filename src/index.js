@@ -39,8 +39,8 @@ app.set('views', path.join(__dirname, 'resource','views'));
 
 
 //nhung file tinh
-app.use(express.static(path.join(__dirname, '\\public')));
-session
+app.use(express.static(path.join(__dirname, 'public')));
+// session
 var MongoDBStore = require('connect-mongodb-session')(session);
 var store = new MongoDBStore({
     uri: "mongodb+srv://tuananh_dubai:123456aA@cluster0.kmi9a.mongodb.net/shoppee_manage?retryWrites=true&w=majority",
