@@ -24,6 +24,13 @@
     "mongoose-delete": "^0.5.3",
     "mongoose-slug-generator": "^1.0.4",
     "multer": "^1.4.2",
+    "passport": "^0.4.1",
+    "passport-facebook": "^3.0.0",
+    "passport-facebook-token": "^4.0.0",
+    "passport-google-oauth20": "^2.0.0",
+    "passport-google-plus-token": "^2.1.0",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
     "shortid": "^2.2.16"
   },
   "devDependencies": {

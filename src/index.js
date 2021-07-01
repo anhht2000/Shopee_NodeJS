@@ -65,6 +65,18 @@ app.use(session({
 route(app);
 
 
+//handle throw ERROR
+app.use((err,req,res,next)=>{
+    const error = app.get("env") === "development" ? err : {};
+    const status = err.status || 500 ;
+    //response to client
+    return res.status(status).json({
+        error:{
+            message: error.message
+        }
+    })
+})
+
 app.listen(port, () => {
     console.log(`App listening at http://localhost:${port}`);
 });

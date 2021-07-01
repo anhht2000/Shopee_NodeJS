@@ -25,29 +25,8 @@ function route(app) {
     app.use('/user',mdw,userRouter)
     //product/...
     app.use('/product',mdw,checkToken,productRouter) //
-    //appuse
-        // app.use("/setCookie",function(req,res,next){
-        //     req.session.destroy(function(err){
-        //         console.log("EEeee",err);
-        //     })
-        // })
-        // app.use("/testCookie",function(req,res,next){
-        //     console.log("ssID",req.sessionID);
-        //     console.log("token",req.session.token);
-        //     console.log("cookie",req.signCookies);
-        //     res.send("req.session.token")
-        // })
-        // app.use("/again",function(req,res,next){
-        //     req.session.regenerate(function(err) {
-        //         console.log("EEeee",err);
-        //         console.log("ssID",req.sessionID);
-        //         console.log("token",req.session.token);
-        //         console.log("user",req.session.user);
-        //     })
-        //     res.send("OK")
-        // })
-        //
-        app.use('/',mdw,homeRouter) //   
+    //home
+    app.use('/',mdw,homeRouter) //   
     }
 
 module.exports = route;

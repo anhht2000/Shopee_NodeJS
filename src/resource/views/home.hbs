@@ -171,12 +171,13 @@
                     <!-- pageNumber  -->
                     <div class="gcol pc12 t12 m12">
                         <div class="main-content__page-number">
-                            <i class="fas fa-chevron-left"></i>
-                            <a href="?index=1" class="link-page d-inline-block number-active">1</a>
+                            <p id="countPage" style="display: none;" data-count="{{count}}"></p>
+                            {{!-- <i class="fas fa-chevron-left"></i>
+                            <a href="?index=1" class="link-page d-inline-block">1</a>
                             <a href="?index=2" class="link-page d-inline-block">2</a>
                             <a href="?index=3" class="link-page d-inline-block">3</a>
                             <a href="?index=4" class="link-page d-inline-block">4</a>
-                            <i class="fas fa-chevron-right"></i>
+                            <i class="fas fa-chevron-right"></i> --}}
                         </div>
                     </div>
                 </div>
@@ -212,5 +213,14 @@
         }
         star.innerHTML = html1 + html2;
     }
+    //render pagelist
+    let page = document.querySelector(".main-content__page-number")
+    let pageCount = page.querySelector("#countPage").getAttribute("data-count")
+    console.log(pageCount)
+    let html3 = '';
+    for (let i = 0; i < pageCount; i++) {
+        html3 += `<a href="?index=${i + 1}" class="link-page d-inline-block">${i + 1}</a>`
+    }
+    page.innerHTML = html3;
 
 </script>

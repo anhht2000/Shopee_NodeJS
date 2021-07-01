@@ -48,46 +48,47 @@ class UserController {
     }
     // [post] /user/login
     handdleLogin(req, res, next){
-        Users.findOne({username:req.body.txtuserName}).lean()
-            .then(data=>{
-                if(!data){
-                    res.render('user/login',{
-                        message:'Tài khoản không tồn tại'
-                    })
-                    return
-                }
-                else{
-                    if(req.body.txtPassword){
-                        //dang nhap thanh cong
-                        if(bcrypt.compareSync(req.body.txtPassword, data.password)){
-                            let token = jwt.sign({
-                                userId: data.id,
-                            },process.env.ACCESS_DATA_TOKEN, { expiresIn: '12h' });
-                            //luu token va user vao phien dang nhap
-                            req.session.token = token;
-                            req.session.user = req.body.txtuserName;
+        // Users.findOne({username:req.body.txtuserName,authType:"local"}).lean()
+        //     .then(data=>{
+        //         if(!data){
+        //             res.render('user/login',{
+        //                 message:'Tài khoản không tồn tại'
+        //             })
+        //             return
+        //         }
+        //         else{
+        //             if(req.body.txtPassword){
+        //                 //dang nhap thanh cong
+        //                 if(bcrypt.compareSync(req.body.txtPassword, data.password)){
+        //                     let token = jwt.sign({
+        //                         userId: data.id,
+        //                     },process.env.ACCESS_DATA_TOKEN, { expiresIn: '12h' });
+        //                     //luu token va user vao phien dang nhap
+        //                     req.session.token = token;
+        //                     req.session.user = req.body.txtuserName;
 
-                            res.redirect('/')
+        //                     res.redirect('/')
                             
-                            return
-                        }
-                        else{
-                            res.render('user/login',{
-                                message:'Mật khẩu hoặc tài khoản sai!'
-                            })
-                            return
-                        }
+        //                     return
+        //                 }
+        //                 else{
+        //                     res.render('user/login',{
+        //                         message:'Mật khẩu hoặc tài khoản sai!'
+        //                     })
+        //                     return
+        //                 }
 
-                    }
-                    else{
-                        res.render('user/login',{
-                            message:'Vui lòng nhập mật khẩu'
-                        })
-                        return
-                    }
-                }
-            })
-            .catch(next)
+        //             }
+        //             else{
+        //                 res.render('user/login',{
+        //                     message:'Vui lòng nhập mật khẩu'
+        //                 })
+        //                 return
+        //             }
+        //         }
+        //     })
+        //     .catch(next)
+        res.redirect("/");
     }
 }
 
