@@ -32,7 +32,7 @@ passport.use(new JwtStrategy({
 passport.use(new GooglePlusTokenStrategy({
   clientID: "332676904403-aakgensnn5747h9h2722upmirke6fqe5.apps.googleusercontent.com",
   clientSecret: "HFjMOqu6ML0q5rRwx94VZFZr",
-  callbackURL: "http://localhost:3000/user/auth/google/callback",
+  callbackURL: "https://shoppee-with-nodejs.herokuapp.com/user/auth/google/callback",
 },async function(accessToken, refreshToken, profile, done) {
   try{
     //CHECKK  xem tài khoản này đã tồn tại trong db chưa
@@ -59,7 +59,7 @@ passport.use(new GooglePlusTokenStrategy({
 passport.use(new FacebookTokenStrategy({
   clientID: "535301504490580",
   clientSecret: "3a0e13d9c43ed4baeec8b07734b0f74a",
-  callbackURL: "https://7e01c6cf7cb8.ngrok.io/user/auth/facebook/callback",
+  callbackURL: "https://shoppee-with-nodejs.herokuapp.com/user/auth/facebook/callback",
   profileFields: ['id', 'displayName', 'photos', 'email'],
 },async function(accessToken, refreshToken, profile, done) {
   try{
